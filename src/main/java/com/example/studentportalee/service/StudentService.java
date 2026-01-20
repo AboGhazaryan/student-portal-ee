@@ -13,12 +13,13 @@ public class StudentService {
     private CourseService courseService = new CourseService();
 
     public void addStudent(Student student) {
-        String sql = "INSERT INTO student(name, surname, email, course_id) VALUES (?, ?, ?, ?)";
+        String sql = "INSERT INTO student(name, surname, email, course_id, picture_name) VALUES (?, ?, ?, ?, ?)";
         try(PreparedStatement preparedStatement = connection.prepareStatement(sql,Statement.RETURN_GENERATED_KEYS)){
             preparedStatement.setString(1,student.getName());
             preparedStatement.setString(2,student.getSurname());
             preparedStatement.setString(3,student.getEmail());
             preparedStatement.setInt(4,student.getCourse().getId());
+            preparedStatement.setString(5,student.getPictureName());
             preparedStatement.executeUpdate();
             ResultSet generatedKeys = preparedStatement.getGeneratedKeys();
             if (generatedKeys.next()){
@@ -95,6 +96,7 @@ public class StudentService {
         student.setSurname(resultSet.getString("surname"));
         student.setEmail(resultSet.getString("email"));
         student.setCourse(courseService.getCourseById(resultSet.getInt("course_id")));
+        student.setPictureName(resultSet.getString("picture_name"));
         return student;
     }
 }

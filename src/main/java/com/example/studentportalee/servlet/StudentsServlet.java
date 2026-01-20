@@ -7,7 +7,6 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-
 import java.io.IOException;
 import java.util.List;
 
@@ -20,6 +19,6 @@ public class StudentsServlet extends HttpServlet {
         List<Student> allStudents = studentService.getAllStudents();
 
         req.setAttribute("students",allStudents);
-        req.getRequestDispatcher("students.jsp").forward(req,resp);
+        req.getRequestDispatcher("/WEB-INF/students.jsp").forward(req,resp);
     }
 }

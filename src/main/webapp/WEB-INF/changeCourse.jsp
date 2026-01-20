@@ -2,7 +2,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Chenge Course</title>
+    <title>Change Course</title>
 </head>
 <%Course course = (Course) request.getAttribute("course"); %>
 

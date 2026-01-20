@@ -21,6 +21,6 @@ public class CoursesServlet extends HttpServlet {
         List<Course>allCourses = courseService.getAllCourses();
 
         req.setAttribute("courses", allCourses);
-        req.getRequestDispatcher("courses.jsp").forward(req,resp);
+        req.getRequestDispatcher("/WEB-INF/courses.jsp").forward(req,resp);
     }
 }
