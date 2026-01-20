@@ -19,7 +19,7 @@ public class AddStudentServlet extends HttpServlet {
     private CourseService courseService = new CourseService();
     private StudentService studentService = new StudentService();
 
-    private static final String IMAGE_UPLOAD_PATH = "C:\\Users\\Admin\\IdeaProjects\\student-portal-ee\\upload-images";
+    private static final String IMAGE_UPLOAD_PATH = "C:\\Users\\Admin\\IdeaProjects\\student-portal-ee\\upload-images\\";
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

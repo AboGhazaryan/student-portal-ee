@@ -15,7 +15,7 @@ import java.io.InputStream;
 
 @WebServlet("/getImage")
 public class GetImageServlet extends HttpServlet {
-    private static final String IMAGE_UPLOAD_PATH = "C:\\Users\\Admin\\IdeaProjects\\student-portal-ee\\upload-images";
+    private static final String IMAGE_UPLOAD_PATH = "C:\\Users\\Admin\\IdeaProjects\\student-portal-ee\\upload-images\\";
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
